@@ -1,6 +1,6 @@
 body {
-  background: #fafafa;
-  color: #1a1a1a;
+  background: #1a1a1a;
+  color: #ffffff;
   margin-top: 5rem;
 }
 
@@ -13,7 +13,7 @@ ul {
 }
 
 .bg-steel {
-  background-color: #5f788a;
+  background-color: #006fbf;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -29,7 +29,8 @@ ul {
 }
 
 .content-section {
-  background: #ffffff;
+  background: #333333;
+  color: #ffffff;
   padding: 10px 20px;
   border: 1px solid #dddddd;
   border-radius: 3px;
@@ -37,16 +38,17 @@ ul {
 }
 
 .article-title {
-  color: #444444;
+  color: #d9d9d9;
 }
 
 a.article-title:hover {
-  color: #428bca;
+  color: #b8b8b8;
   text-decoration: none;
 }
 
 .article-content {
   white-space: pre-line;
+  color: #ffffff;
 }
 
 .article-img {
@@ -83,7 +85,6 @@ a.article-title:hover {
   font-size: 2.5rem;
 }
 
-.container{
-  background-color: #1a1a1a;
-
+p.article-content{
+  color:#ffffff;
 }

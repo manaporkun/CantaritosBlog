@@ -1,5 +1,8 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+# Datasource local storage ignored files
+/../../../../../../../../:\Users\0101\code_snippets\Django_Blog\08-Profile-And-Images\django_project\.idea/dataSources/
+/dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
