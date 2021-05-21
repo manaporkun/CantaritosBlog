@@ -1,21 +1,30 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+    <div class="col-sm-12", ID="logmain">
     <div class="content-section">
         <form method="POST">
+
             {% csrf_token %}
+            {% load static %}
+            <div class="col-sm-8">
+           <img class="img1" src="{% static 'blog/images/signUp.svg' %}" alt="photo" />
             <fieldset class="form-group" style="color:whitesmoke">
                 <legend class="border-bottom mb-4">Join Today</legend>
                 {{ form|crispy }}
+
             </fieldset>
             <div class="form-group" style="color:whitesmoke">
                 <button class="btn btn-outline-info" type="submit">Sign Up</button>
             </div>
+                </div>
         </form>
         <div class="border-top pt-3" style="color:whitesmoke">
             <small class="text-muted">
                 Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
             </small>
         </div>
+        </div>
     </div>
+
 {% endblock content %}
