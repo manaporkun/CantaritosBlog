@@ -42,6 +42,22 @@
                 <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
               {% endif %}
             </div>
+		   <div class="lightitems">
+                    <script>
+    var colors = [,"#0C090A", "#25383C", "#736F6E","#848482","#262121"];
+    var colorIndex = 0;
+    function changeColor() {
+        var col = document.getElementById("swap");
+        if( colorIndex >= colors.length ) {
+            colorIndex = 0;
+        }
+        col.style.backgroundColor = colors[colorIndex];
+        colorIndex++;
+    }
+</script>
+    <body id='swap'>
+     {% load static %}
+    <button type="button" onclick="changeColor();" class="ENJBTN">BG</button>
           </div>
         </div>
       </nav>
