@@ -8,6 +8,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #eeeaea;
 }
 
+.search-bar{
+    max-width: 500px;
+    width: 100%;
+    margin-right: 75px;
+}
+
+
+
 ul {
   margin: 0;
 }

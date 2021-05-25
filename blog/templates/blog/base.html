@@ -31,6 +31,11 @@
               <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
               <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
             </div>
+          <div class="search-bar">
+                <form method="get">
+                    <input type="text" class="form-control" name ="q" id="id_q" placeholder="Search...">
+                </form>
+          </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if user.is_authenticated %}
@@ -42,6 +47,7 @@
                 <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
               {% endif %}
             </div>
+
 		   <div class="lightitems">
                     <script>
     var colors = [,"#0C090A", "#25383C", "#736F6E","#848482","#262121"];
