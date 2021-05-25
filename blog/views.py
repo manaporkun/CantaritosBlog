@@ -13,14 +13,7 @@ from .models import Post
 
 
 def home(request):
-    context = {
-        'posts': Post.objects.all()
-    }
-
-    if request.GET:
-        query = request.GET['q']
-        context['query'] = str(query)
-
+    context = {'posts': Post.objects.all()}
     return render(request, 'blog/home.html', context)
 
 
@@ -30,6 +23,15 @@ class PostListView(ListView):
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = 5
+
+    def get_queryset(self):
+        query = self.request.GET.get('q', None)
+        if not query:
+            query = ""
+        object_list = Post.objects.filter(
+            Q(title__icontains=query) | Q(content__icontains=query)
+        )
+        return object_list
 
 
 class UserPostListView(ListView):
@@ -84,18 +86,3 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
-
-
-def get_blog_queryset(query=None):
-    queryset = []
-    queries = query.split(" ")
-
-    for q in queries:
-        posts = Post.objects.filter(
-            Q(title__icontrains=q) |
-            Q(body__icontrains=q)).distinct()
-
-        for post in posts:
-            queryset.append(post)
-
-    return list(set(queryset))

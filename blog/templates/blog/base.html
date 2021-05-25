@@ -49,7 +49,7 @@
             </div>
 
 		   <div class="lightitems">
-                    <script>
+               <script>
     var colors = [,"#0C090A", "#25383C", "#736F6E","#848482","#262121"];
     var colorIndex = 0;
     function changeColor() {
@@ -60,6 +60,8 @@
         col.style.backgroundColor = colors[colorIndex];
         colorIndex++;
     }
+
+    document.getElementById("id_q").value = "{{ query }}"
 </script>
     <body id='swap'>
      {% load static %}
