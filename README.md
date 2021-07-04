@@ -2,13 +2,16 @@
 
 Cantaritos Blog is a blog page developed with Django Framework for the Software Engineering course.
 
-Cantaritos Team:
+<b>Cantaritos Team:</b>
 
 @manaporkun - Backend Developer
+
 @pablinpc99 - Backend Developer
+
 @LeQuXi - Frontend Developer
 
-Screenshots:
+<b>Screenshots:</b>
+
 
 ![](screenshots/home.png)
 ![](screenshots/login.png)
